@@ -1,0 +1,266 @@
+git init
+git config --global user.name "Polarapu Prasad"
+git config --global user.email "devopstraining2015@gmail.com"
+git config --list
+
+git config --global --unset user.name
+git config --global --unset user.eamil
+git config --list
+
+git config --global user.name "Polarapu Prasad"
+git config --global user.email "devopstraining2015@gmail.com"
+
+=============================
+touch file1
+ls
+git status
+git add file1  (workspace to staging/index)
+git status
+git commit -m "label" file1  (staging to local)
+git status
+git log
+git show cid
+
+============================
+
+touch file3 file4 file5
+ls
+git status
+git add file3 file4 file5
+or
+git add .
+or
+git add *
+or
+git add -A
+
+git status
+git commit -m "label"
+git status
+git log
+
+
+=======================
+git clone https://github.com/polarapu/batch84.git
+ls
+cd batch84
+ls
+touch file1
+git status
+git add .
+git commit -m "smaple file"
+git push
+
+rm -rf file1
+ls
+git add .
+git commit -m "deleted file"
+git push
+
+
+=============================
+mkdir dir1
+ls
+git status
+cd dir1
+touch f1 f2
+cd ..
+git status
+git add .
+git commit -m "sample dir"
+git push
+
+=================================================
+git clone https://github.com/polarapu/batch84.git
+ls
+cd batch84
+touch prasad
+git status
+git add .
+git status
+git commit -m "smaple file from prasad"
+git status
+git push
+git pull --rebase
+git push
+git pull --rebase
+git push
+
+
+=========================
+git reset head file-name   (staging to workspace)
+git reset --soft cid   (local to staging)
+git reset --mixed cid   (local to workspace)
+
+git reset --hard cid  (to delete commit and commit data from local repository)
+
+
+Branch
+======
+git branch
+git branch release1
+git branch
+git checkout release1
+git merge main
+
+git branch -d release1  (local repo)
+
+git push origin release1
+or
+git push path/of/c-repo release1
+
+git push origin -d release  ( to delete on central repo)
+
+=======================
+Alias
+======
+git status
+git config --global alias.s "status"
+git s
+
+git config --list
+git config --global alias.cl "config --list"
+git cl
+
+git log
+git config --global alias.l "log"
+git l
+
+git config --global --unset alias.s  (to remove alias)
+
+logs
+=====
+
+git log
+git log -n
+git log --oneline
+git log --oneline -n
+git log --author=name
+git log --author=name -n
+git log --author=prasad --oneline
+git log --author=prasad --oneline -n
+
+git log --since=yy-mm-dd
+or
+git log --after=yy-mm-dd
+
+git log --until=yy-mm-dd
+or
+git log --before=yy-mm-dd
+
+git log --since=yy-mm-dd --until=yy-mm-dd
+or
+git log --after=yy-mm-dd --before=yy-mm-dd
+
+git log --after="yy-mm-dd 24:00" --before="yy-mm-dd 24:00"
+
+git log -- file-name
+git log --grep "label"
+
+
+TAGS
+=====
+git tag
+git tag T-1.0
+git show T-1.0
+
+git checkout T-1.0
+git tag -d T-1.0  (delete on local)
+
+git tag T2.0 cid
+git push origin T2.0  (to upload into central repo)
+git push --tags  (all tags)
+
+git push origin -d T-1.0  ( to delete on central repo)
+
+STASH
+======
+git stash list
+git stash save "stash1"
+git stash list
+git stash show stash@{x}
+git stash show -p stash@{x}   (with data)
+
+POP, APPLY, DROP
+=================
+
+POP = cut
+=========
+git stash pop
+git stash pop stash@{x}
+
+APPLY = COPY
+===============
+git stash apply
+git stash apply stash@{x}
+
+
+DROP = delete
+==============
+git stash drop
+git stash drop stash@{x}
+
+========================================
+merge vs rebase
+================
+git merge branch-name
+git rebase branch-name
+
+
+git cherry-pick
+git ammend
+git revert
+git diff
+git fork
+.gitignore
+biset
+git fetch
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
